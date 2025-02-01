@@ -21,12 +21,15 @@
 	<p>Server Sent Event Streams are unidirectional streams and are part of the HTTP standard.</p>
 	<p>They are lightweight, easy to setup (requiring just a few header declarations) and easy to extend.</p>
 	<section role="group">
-	<pre style="margin-right: 1rem;"><code style="width: fit-content;">id: first-event
+	<pre style="margin-right: 1rem;"><code style="width: fit-content;">
+event: event-type
+id: first-event
 retry: 1000
 data: some data
 </code></pre>
 	<div>
-	<p>The id line is optional.</p>
+	<p>The event and id lines are optional.</p>
+	<p>The retry specifies how long to wait before </br> reconnections in the advent of a connexion loss.</p>
 	<p>Each part of the event is separated by a new line.</p>
 	<p>A second new line terminates the event.</p>
 	</div>
