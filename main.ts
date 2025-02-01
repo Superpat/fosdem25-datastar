@@ -266,4 +266,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 app.use("/page/*", serveStatic({ root: "./" }));
 
-Deno.serve({ hostname: "localhost", port: 8787 }, app.fetch);
+Deno.serve({ hostname: "0.0.0.0", port: 8787 }, app.fetch);
