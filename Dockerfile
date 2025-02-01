@@ -22,7 +22,6 @@ COPY --from=bin /deno /bin/deno
 
 WORKDIR /deno-dir
 COPY . .
-RUN cd vendor/datastar-sdk/ && deno install
 
 ENTRYPOINT ["/bin/deno"]
 CMD ["run", "./main.ts"]
