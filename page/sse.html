@@ -19,16 +19,20 @@
 	<p>But first we need to talk about server sent events.</p>
 	<p>Every request in datastar is an event stream.</p>
 	<p>Server Sent Event Streams are unidirectional streams and are part of the HTTP standard.</p>
-	<p>They are lightweight, easy to setup (requiring just a few header declarations) and easy to extend</p>
-
-	<pre><code>id: first-event
+	<p>They are lightweight, easy to setup (requiring just a few header declarations) and easy to extend.</p>
+	<section role="group">
+	<pre style="margin-right: 1rem;"><code style="width: fit-content;">id: first-event
 retry: 1000
 data: some data
-
-	</code></pre>
-	<p>Each part of the event is separated by a new line and a second new line terminates the event, the id line is optional.</p>
+</code></pre>
+	<div>
+	<p>The id line is optional.</p>
+	<p>Each part of the event is separated by a new line.</p>
+	<p>A second new line terminates the event.</p>
+	</div>
+	</section>
 	<p>Since it's standard http, you can proxy http1 to http2, add compression and etc with any standard http proxy.</p>
-	<p>Datastar's implementation was originally based on azure's fetch-event-source implementation</p>
+	<p>Datastar's implementation was originally based on azure's fetch-event-source implementation.</p>
 	</main>
 <footer id="footer">
       <aside>

@@ -16,17 +16,25 @@
   >
 	<header id="header"><h1>Networked Applications</h1></header>
 <main id="main">
-<p>All signals on the page are sent to the backend when a request is made.</p>
-<p>The server can respond with 0 to infinite events</p>
-<p>Html fragments are merged with Idiomorph</p>
-<h2>Example</h2>
+
+<section>
+<div role="group">
+<section style="margin-right: 1rem;">
+<h2>On the client</h2>
+<section>
 <label for="question">What is 2 + 2 ?</label>
 <section role="group" id="form"><input id="question" data-bind-question type="number" />
 <button data-on-click="@get('/teacher')">Send</button></section>
-<h2>What's going on</h2>
-<p>On the client</p>
+</section>
+<h3>How does it work ?</h3>
+<pre><code>input id="question" data-bind-question</code></pre>
 <pre><code>button data-on-click="@get('/teacher')"</code></pre>
-<p>On the server</p>
+<p>All signals on the page are sent to the backend when a request is made.</p>
+<p>Html fragments are merged with Idiomorph</p>
+</section>
+<section>
+<h2>On the server</h2>
+<p>The server can respond with 0 to infinite events</p>
 <pre><code>return ServerSentEventGenerator.stream(async (stream) => {
 <span>	</span>stream.removeFragments('#answer');
 
@@ -49,6 +57,11 @@
     <span>	</span>stream.close();
     }
 </code></pre>
+</section>
+</div>
+</section>
+
+
 </main>
 <footer id="footer">
       <aside>
