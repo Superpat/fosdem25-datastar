@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/sse.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+	<header id="header"><h1>Server Sent Events</h1></header>
+<main id="main">
+	<p>But first we need to talk about server sent events.</p>
+	<p>Every request in datastar is an event stream.</p>
+	<p>Server Sent Event Streams are unidirectional streams and are part of the HTTP standard.</p>
+	<p>They are lightweight, easy to setup (requiring just a few header declarations) and easy to extend</p>
+
+	<pre><code>id: first-event
+retry: 1000
+data: some data
+
+	</code></pre>
+	<p>Each part of the event is separated by a new line and a second new line terminates the event, the id line is optional.</p>
+	<p>Since it's standard http, you can proxy http1 to http2, add compression and etc with any standard http proxy.</p>
+	<p>Datastar's implementation was originally based on azure's fetch-event-source implementation</p>
+	</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events">MDN - Using Server Sent Events</a></li>
+        <li><a href="https://github.com/Azure/fetch-event-source">Github - Azure Fetch Event Source</a></li>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="plugins.html">Previous</a></li>
+		<li><a id="next" href="sdk.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

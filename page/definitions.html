@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/definitions.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+    <header id="header"><h1>Definitions</h1></header>
+    <main id="main">
+      <dl>
+        <dt><abbr title="Multi Page Applications">MPA</abbr></dt>
+        <dd>Classic websites sprinkled with javascript</dd>
+        <dt><abbr title="Single Page Applications">SPA</abbr></dt>
+        <dd>Attempts to recreate a native style application on the web, effectively requires you to build two separate applications.</dd>
+        <dt>Hypermedia</dt>
+        <dd>A non linear media that may contain links to documents and can include non textual documents.</dd>
+        <dt><abbr title="Hypermedia as the engine of application state">HATEOAS</abbr></dt
+        <dd>Means that the server is the arbiter of client state and possible interactions are made available to the client via hypermedia</dd>
+	</dl>
+
+      </section>
+    </main>
+    <footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li>
+        <a href="https://en.wikipedia.org/wiki/Hypermedia"
+        >Wikipedia - Hypermedia</a></li>
+        <li>
+        <a href="https://en.wikipedia.org/wiki/HATEOAS">Wikipedia - HATEOAS</a></li>
+        <li><a href="https://htmx.org/">HTMX home page</a></li>
+        <li><a href="http://www.patrickmarchand.com:8083/openbsd-datastar/intro.html">EuroBSDCon - Puffy Does Realtime Hypermedia</a></li>
+      </aside>
+      <nav>
+        <ol>
+          <li><a id="previous" href="who.html">Previous</a></li>
+          <li><a id="next" href="datastar.html">Next</a></li>
+        </ol>
+      </nav>
+    </footer>
+  </body>
+</html>

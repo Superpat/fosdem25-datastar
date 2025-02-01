@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/plugins.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+	<header id="header"><h1>Datastar Plugins</h1></header>
+<main id="main">
+	<p>Making HTMX extendable is the initial raison d'être of datastar</p>
+
+	<p>The datastar engine handles signals and does the dataset attribute parsing and evaluation.</p>
+	<p>It also exposes a way to load plugins that extend Datastar.</p>
+	<p>All the rest is plugins, for instance the previous example was made with the attributes plugin.</p>
+	<p>The next plugin we will explore is the backend plugin.</p>
+	</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://data-star.dev/reference/action_plugins#backend-plugins">Datastar Reference - Backend Plugin</a></li>
+        <li><a href="https://data-star.dev/essays/why_another_framework">Datastar Essays - Why another framework</a></li>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="local.html">Previous</a></li>
+		<li><a id="next" href="sse.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

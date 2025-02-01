@@ -1,0 +1,40 @@
+{
+  "version": "4",
+  "specifiers": {
+    "jsr:@b-fuze/deno-dom@*": "0.1.49",
+    "jsr:@std/async@*": "1.0.9",
+    "npm:alien-signals@*": "1.0.0",
+    "npm:deepmerge-ts@*": "7.1.4",
+    "npm:entities@*": "6.0.0",
+    "npm:hono@*": "4.6.19",
+    "npm:type-fest@*": "4.32.0"
+  },
+  "jsr": {
+    "@b-fuze/deno-dom@0.1.49": {
+      "integrity": "45c40175fdd1e74ab2d4b54c4fdaabbad6e5b76ee28df12a48e076b3fa7901a9"
+    },
+    "@hono/hono@4.6.17": {
+      "integrity": "932fcc61d043b14a8b2cb65242716eb32da44e91f2ee117fd7390508669fea31"
+    },
+    "@std/async@1.0.9": {
+      "integrity": "c6472fd0623b3f3daae023cdf7ca5535e1b721dfbf376562c0c12b3fb4867f91"
+    }
+  },
+  "npm": {
+    "alien-signals@1.0.0": {
+      "integrity": "sha512-Fd2sYMdyjWD6VKxeewCYHXsIYAiELGMtQzGJ6vyxpxtQ1exXYiNTynSqGllkk+mOqhtBFYcC1Qvb49FbCSvsQw=="
+    },
+    "deepmerge-ts@7.1.4": {
+      "integrity": "sha512-fxqo6nHGQ9zOVgI4KXqtWXJR/yCLtC7aXIVq+6jc8tHPFUxlFmuUcm2kC4vztQ+LJxQ3gER/XAWearGYQ8niGA=="
+    },
+    "entities@6.0.0": {
+      "integrity": "sha512-aKstq2TDOndCn4diEyp9Uq/Flu2i1GlLkc6XIDQSDMuaFE3OPW5OphLCyQ5SpSJZTb4reN+kTcYru5yIfXoRPw=="
+    },
+    "hono@4.6.19": {
+      "integrity": "sha512-Xw5DwU2cewEsQ1DkDCdy6aBJkEBARl5loovoL1gL3/gw81RdaPbXrNJYp3LoQpzpJ7ECC/1OFi/vn3UZTLHFEw=="
+    },
+    "type-fest@4.32.0": {
+      "integrity": "sha512-rfgpoi08xagF3JSdtJlCwMq9DGNDE0IMh3Mkpc1wUypg9vPi786AiqeBBKcqvIkq42azsBM85N490fyZjeUftw=="
+    }
+  }
+}

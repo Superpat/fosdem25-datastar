@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/datastar.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+	<header id="header"><h1>Reactive HTML</h1></header>
+<main id="main">
+	<p>What primitives are required to write interactive applications in html ?</p>
+
+	<ul>
+	<li><input type="checkbox" readonly disabled checked>Ability for user's to input new data </li>
+	<li><input type="checkbox" readonly disabled checked>An event handling system </li>
+	<li><input type="checkbox" readonly disabled>Fine grained reactivity with Signals </li>
+	<li><input type="checkbox" readonly disabled>Reactive attributes </li>
+	<li><input type="checkbox" readonly disabled>Dynamic Transclusions</li>
+	</ul>
+	<p>HTMX is often combined with AlpineJS</p>
+	<h2>Filling the gap with Datastar</h2>
+	<p>A global store of fine grained Signals</p>
+	<p>Reactive expressions that can be bound to attributes and events</p>
+	<p>We will talk about tranclusions later</p>
+	</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://data-star.dev/">Datastar home page</a></li>
+        <li><a href="https://alpinejs.dev/">AlpineJS home page</a></li>
+        <li><a href="https://github.com/tc39/proposal-signals">Javascript Signals Standard Proposal</a></li>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="definitions.html">Previous</a></li>
+		<li><a id="next" href="local.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

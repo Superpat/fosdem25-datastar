@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/day2.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+	<header id="header"><h1>Day 2 problems</h1></header>
+<main id="main">
+  <p>Datastar optimizes for day 2 problems</p>
+  <ul>
+  <li>Adding realtime updates</li>
+  <li>Synchronizing state between clients</li>
+  <li>Setting up work queues for heavy operations</li>
+  <li>Synchronizing state between clients</li>
+  </ul>
+
+  <p>The recommended setup for datastar might be more work to setup, but it scales very well</p>
+  <p>Performance is very good</p>
+</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Retained_mode">Wikipedia - Retained Mode</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Immediate_mode_(computer_graphics)">Wikipedia - Immediate Mode</a></li>
+        <li><a href="https://github.com/stackblitz/alien-signals">Github - Alien Signals</a></li>
+        </ul>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="realtime.html">Previous</a></li>
+		<li><a id="next" href="end.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

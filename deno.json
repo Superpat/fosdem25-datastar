@@ -1,0 +1,11 @@
+{
+  "imports": {
+  },
+  "tasks": {
+    "start": "deno run --allow-net --allow-read --watch main.ts"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}

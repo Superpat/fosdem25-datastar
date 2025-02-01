@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/intro.html')"
+    data-on-keydown__window="evt.key == 'ArrowRight' && first.click()"
+  >
+    <header id="header">
+      <hgroup>
+        <h1>Push Based Hypermedia</h1>
+        <p>With Datastar</p>
+      </hgroup>
+    </header>
+    <main id="main">
+      <p>
+        Since if you're doing server side generation already, why not go all the
+        way ?
+      </p>
+      <p>
+        Follow along on <a
+          href="https://www.patrickmarchand.com/fosdem2025/intro.html"
+        >https://www.patrickmarchand.com/fosdem2025/intro.html</a>
+      </p>
+      <aside>
+        <h2>Talk Points</h2>
+        <nav>
+          <li><a id="first" href="who.html">Who am I</a></li>
+          <li><a href="definitions.html">Definitions</a></li>
+          <li><a href="datastar.html">What is Datastar</a></li>
+          <li><a href="bchs.html">Local Applications</a></li>
+          <li><a href="howl.html">Datastar Plugins</a></li>
+          <li><a href="engine.html">Server Sent Events</a></li>
+          <li><a href="openbsd.html">The Datastar Typescript SDK</a></li>
+          <li><a href="attributes.html">Networked Applications</a></li>
+          <li><a href="simple.html">Immediate Mode vs Retained Mode</a></li>
+          <li><a href="model.html">Day 2 problems</a></li>
+          <li><a href="sse.html">Realtime Applications</a></li>
+          <li><a href="end.html">Conclusion</a></li>
+        </nav>
+      </aside>
+    </main>
+  </body>
+</html>

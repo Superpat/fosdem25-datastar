@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/realtime.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft'  && previous.click() || evt.key == 'ArrowRight' && next.click()">
+	<header id="header"><h1>Realtime Applications</h1></header>
+<main id="main">
+	<p>This whole presentation is a datastar applications</p>
+	<p>On keypress hooks handle navigation between slides</p>
+	<pre><code>data-on-keydown__window="
+<span>	</span>evt.key == 'ArrowLeft'  && previous.click()
+<span>	</span>|| evt.key == 'ArrowRight' && next.click()
+"</code></pre>
+	<p>Slides are simple html files</p>
+	<p>A datastar request is started when a page is open</p>
+	<pre><code>data-on-load="@get('/watch/realtime.html')"</code></pre>
+	<p>It sets up a watcher on the file and updates the client in realtime</p>
+	<p>Easy to add features like in-browser website editing</p>
+</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://peertube.mesnumeriques.fr/w/qQokKnvuxjmd7UWWMsDW8C">Mes Numériques Peertube - Datastar Powered Website Editor</a></li>
+        <li><a href="https://github.com/synadia-labs/showcase/blob/main/dronegame/walkthrough.md">Synadia Labs - Drone Game</a></li>
+        <li><a href="https://data-star.dev/examples">Datastar Website - Examples</a></li>
+        </ul>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="gui_modes.html">Previous</a></li>
+		<li><a id="next" href="day2.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

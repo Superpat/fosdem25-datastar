@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/networked.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' ? previous.click() : evt.key == 'ArrowRight' ? next.click() : null"
+  >
+	<header id="header"><h1>Networked Applications</h1></header>
+<main id="main">
+<p>All signals on the page are sent to the backend when a request is made.</p>
+<p>The server can respond with 0 to infinite events</p>
+<p>Html fragments are merged with Idiomorph</p>
+<h2>Example</h2>
+<label for="question">What is 2 + 2 ?</label>
+<section role="group" id="form"><input id="question" data-bind-question type="number" />
+<button data-on-click="@get('/teacher')">Send</button></section>
+<h2>What's going on</h2>
+<p>On the client</p>
+<pre><code>button data-on-click="@get('/teacher')"</code></pre>
+<p>On the server</p>
+<pre><code>return ServerSentEventGenerator.stream(async (stream) => {
+<span>	</span>stream.removeFragments('#answer');
+
+    <span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;The teacher is answering&lt;/section&gt;',
+    <span>	</span><span>	</span>{ "mergeMode": "after", selector: "#fom" }
+    <span>	</span>);
+    <span>	</span>await delay(500);
+
+    <span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;The teacher is answering.&lt;/section&gt;');
+    <span>	</span>await delay(500);
+
+    <span>	</span>...
+
+    <span>	</span>body.signals.question == 4 ?
+      <span>	</span><span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;Your answer is correct :)&lt;/section&gt;') :
+      <span>	</span><span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;Your answer is wrong :(&lt;/section&gt;') :
+
+
+
+    <span>	</span>stream.close();
+    }
+</code></pre>
+</main>
+<footer id="footer">
+      <aside>
+        <h2>See Also</h2>
+        <ul>
+        <li><a href="https://github.com/bigskysoftware/idiomorph">Github - Idiomorph</a></li>
+      </aside>
+	<nav>
+	<ol>
+		<li><a id="previous" href="sdk.html">Previous</a></li>
+		<li><a id="next" href="gui_modes.html">Next</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>

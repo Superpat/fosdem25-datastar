@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title id="title">Push Based Hypermedia with Datastar</title>
+    <script id="datastar-script" type="module" src="/page/datastar.js"></script>
+    <link
+      id="pico-style"
+      rel="stylesheet"
+      href="/page/pico.classless.orange.min.css"
+    >
+    <meta id="charset" charset="UTF-8">
+  </head>
+  <body
+    data-on-load="@get('/watch/end.html')"
+    data-on-keydown__window="evt.key == 'ArrowLeft' && previous.click()"
+  >
+	<header id="header"><h1>End</h1></header>
+<main id="main">
+  <p>Datastar website: <a href="https://data-star.dev">https://data-star.dev/</a></p>
+  <p>Ask me questions: <a href="mailto:mail@patrickmarchand.com">mail@patrickmarchand.com</a></p>
+  <p>Join the discord: <a href="https://discord.gg/bnRNgZjgPh">https://discord.gg/bnRNgZjgPh</a></p>
+
+</main>
+<footer id="footer">
+
+	<nav>
+	<ol>
+		<li><a id="previous" href="day2.html">Previous</a></li>
+	</ol>
+	</nav></footer>
+
+	</body>
+</html>
