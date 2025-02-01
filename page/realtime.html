@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title id="title">Push Based Hypermedia with Datastar</title>
+    <title id="title">Push-based Hypermedia with Datastar</title>
     <script id="datastar-script" type="module" src="/page/datastar.js"></script>
     <link
       id="pico-style"
@@ -13,18 +13,18 @@
   <body
     data-on-load="@get('/watch/realtime.html')"
     data-on-keydown__window="evt.key == 'ArrowLeft'  && previous.click() || evt.key == 'ArrowRight' && next.click()">
-	<header id="header"><h1>Realtime Applications</h1></header>
+	<header id="header"><h1>Real-time Applications</h1></header>
 <main id="main">
-	<p>This whole presentation is a datastar applications</p>
+	<p>This whole presentation is a Datastar application</p>
 	<p>On keypress hooks handle navigation between slides</p>
 	<pre><code>data-on-keydown__window="
-<span>	</span>evt.key == 'ArrowLeft'  && previous.click()
-<span>	</span>|| evt.key == 'ArrowRight' && next.click()
+<span>	</span>(evt.key == 'ArrowLeft' && previous.click())
+<span>	</span>|| (evt.key == 'ArrowRight' && next.click())
 "</code></pre>
-	<p>Slides are simple html files</p>
-	<p>A datastar request is started when a page is open</p>
+	<p>Slides are simple HTML files</p>
+	<p>A Datastar request is started when a page is opened</p>
 	<pre><code>data-on-load="@get('/watch/realtime.html')"</code></pre>
-	<p>It sets up a watcher on the file and updates the client in realtime</p>
+	<p>It sets up a watcher on the file and updates the client in real-time</p>
 	<p>Easy to add features like in-browser website editing</p>
 </main>
 <footer id="footer">
@@ -38,8 +38,8 @@
       </aside>
 	<nav>
 	<ol>
-		<li><a id="previous" href="gui_modes.html">Previous</a></li>
-		<li><a id="next" href="day2.html">Next</a></li>
+		<li><a id="previous" href="gui_modes.html">← Previous</a></li>
+		<li><a id="next" href="day2.html">Next →</a></li>
 	</ol>
 	</nav></footer>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title id="title">Push Based Hypermedia with Datastar</title>
+    <title id="title">Push-based Hypermedia with Datastar</title>
     <script id="datastar-script" type="module" src="/page/datastar.js"></script>
     <link
       id="pico-style"
@@ -16,12 +16,12 @@
   >
 	<header id="header"><h1>Datastar SDK</h1></header>
 <main id="main">
-	<p>There are five types of server sent events in Datastar</p>
+	<p>There are five types of server-sent events in Datastar</p>
 	<ul>
-		<li>Merge Fragment (our main workhorse)</li>
-		<li>Remove Fragment</li>
-		<li>Merge Signal (very useful if interacting with web-components)</li>
-		<li>Remove Signal</li>
+		<li>Merge Fragments (our main workhorse)</li>
+		<li>Remove Fragments</li>
+		<li>Merge Signals (very useful if interacting with web-components)</li>
+		<li>Remove Signals</li>
 		<li>Execute Script (mostly for interacting with browser api's)</li>
 	</ul>
 	<p>Datastar Events follow a specific format</p>
@@ -32,9 +32,9 @@ data: mergeMode append
 data: selector #main
 data: fragment &lt;p&gt;Hello World&lt;/p&gt;
 </code></pre>
-<p>To help end user's, SDK's have been developed for various backend languages. </p>
-<p>I maintain the typescript SDK, available on npm</p>
-<p>I also maintain the SDK test suite, written in shell so all SDK's can share the same tests</p>
+<p>To help end-users, SDKs have been developed for various backend languages. </p>
+<p>I maintain the TypeCcript SDK, available on npm</p>
+<p>I also maintain the SDK test suite, written in shell so all SDKs can share the same tests</p>
 
 	</main>
 <footer id="footer">
@@ -43,13 +43,14 @@ data: fragment &lt;p&gt;Hello World&lt;/p&gt;
         <ul>
         <li><a href="https://data-star.dev/reference/sse_events">Datastar Reference - SSE Events</a></li>
         <li><a href="https://data-star.dev/reference/sdks">Datastar Reference - List of SDK's</a></li>
-        <li><a href="https://github.com/starfederation/datastar/tree/develop/sdk/test">Github - Datastar SDK testing suite</a></li>
+        <li><a href="https://github.com/starfederation/datastar/tree/develop/sdk/test">GitHub - Datastar SDK testing suite</a></li>
         <li><a href="https://www.npmjs.com/package/@starfederation/datastar-sdk">NPM - Datastar SDK</a></li>
+		</ul>
       </aside>
 	<nav>
 	<ol>
-		<li><a id="previous" href="sse.html">Previous</a></li>
-		<li><a id="next" href="networked.html">Next</a></li>
+		<li><a id="previous" href="sse.html">← Previous</a></li>
+		<li><a id="next" href="networked.html">Next →</a></li>
 	</ol>
 	</nav></footer>
 
