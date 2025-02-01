@@ -9,13 +9,13 @@ primary_region = 'ams'
 [build]
 
 [env]
-  PORT = '8080'
+  PORT = '8787'
 
 [processes]
-  app = 'run -A ./'
+  app = 'deno run -A ./main.ts'
 
 [http_service]
-  internal_port = 8080
+  internal_port = 8787
   force_https = true
   auto_stop_machines = 'stop'
   auto_start_machines = true
