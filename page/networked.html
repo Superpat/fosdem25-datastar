@@ -26,15 +26,15 @@
 <section role="group" id="form"><input id="question" data-bind-question type="number" />
 <button data-on-click="@get('/teacher')">Send</button></section>
 </section>
-<h3>How does it work ?</h3>
+<h3>How does it work?</h3>
 <pre><code>input id="question" data-bind-question</code></pre>
 <pre><code>button data-on-click="@get('/teacher')"</code></pre>
 <p>All signals on the page are sent to the backend when a request is made.</p>
-<p>Html fragments are merged with Idiomorph</p>
+<p>HTML fragments are merged with Idiomorph</p>
 </section>
 <section>
 <h2>On the server</h2>
-<p>The server can respond with 0 to infinite events</p>
+<p>The server can respond with 0 to n events</p>
 <pre><code>return ServerSentEventGenerator.stream(async (stream) => {
 <span>	</span>stream.removeFragments('#answer');
 
@@ -52,8 +52,6 @@
       <span>	</span><span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;Your answer is correct :)&lt;/section&gt;') :
       <span>	</span><span>	</span>stream.mergeFragments('&lt;section id="answer"&gt;Your answer is wrong :(&lt;/section&gt;') :
 
-
-
     <span>	</span>stream.close();
     }
 </code></pre>
@@ -67,7 +65,8 @@
       <aside>
         <h2>See Also</h2>
         <ul>
-        <li><a href="https://github.com/bigskysoftware/idiomorph">Github - Idiomorph</a></li>
+        <li><a href="https://github.com/bigskysoftware/idiomorph">GitHub - Idiomorph</a></li>
+        </ul>
       </aside>
 	<nav>
 	<ol>
