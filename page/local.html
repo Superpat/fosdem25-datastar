@@ -14,17 +14,21 @@
     data-on-load="@get('/watch/local.html')"
     data-on-keydown__window="evt.key == 'ArrowLeft' && previous.click() || evt.key == 'ArrowRight' && next.click()"
   >
+
     <header id="header"><h1>Local Applications</h1></header>
     <main id="main">
       <p>
         Datastar can be used to write interactive, non-networked, applications.
-      </p>
+      </p>    <div role="group">
+    <section style="margin-right: 1rem;">
+
       <ol>
       <li>Bind a signal to the input <pre><code>input type="text" data-bind-calc</code></pre></li>
       <li>Concat the button’s text to the signal<pre><code>button data-on-click="$calc=$calc.toString().concat('+')"</code></pre></li>
       <li>Eval on click (don’t do this in a real app)<pre><code>button data-on-click="$calc=eval($calc).toString()"</code></pre></li>
       </ol>
-
+      </section>
+     <article>
       <section role="group">
         <input type="text" data-bind-calc>
         <button data-on-click="$calc=eval($calc).toString()">=</button>
@@ -51,10 +55,12 @@
         <button data-on-click="$calc=$calc.toString().concat('9')">9</button>
       </section>
       <section role="group">
-        <button data-on-click="$calc=$calc.toString().concat(',')">,</button>
+        <button data-on-click="$calc=$calc.toString().concat('.')">.</button>
         <button data-on-click="$calc=$calc.toString().concat('*')">*</button>
         <button data-on-click="$calc=$calc.toString().concat('/')">/</button>
       </section>
+      </article>
+      </div>
     </main>
     <footer id="footer">
       <aside>
